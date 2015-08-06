@@ -1,0 +1,366 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <title>工作坊操作页</title>
+    <link type="text/css" rel="stylesheet" href="css/reset.css" />
+    <link type="text/css" rel="stylesheet" href="css/header.css" />
+    <link type="text/css" rel="stylesheet" href="css/js-main.css" />
+    <link type="text/css" rel="stylesheet" href="css/work-index.css" />
+    <link type="text/css" rel="stylesheet" href="css/other.css">
+    <style>
+        .ms-controller{
+            visibility: hidden;
+        }
+    </style>
+</head>
+
+<body ms-controller="main">
+    <div class="layout">
+        <!--banner S-->
+        <div class="workHouse-banner">
+            <div class="w80">
+                <div class="work-photo fl">
+                    <a href="#">
+                        <img src="images/workshop/pic_03.jpg" title="名字" alt="名字" />
+                        <div class="photo-shadow"></div>
+                    </a>
+                </div>
+                <div class="workPerson-text fl" ms-controller="workshop">
+                    <div class="work-title">
+                        <h1 class="fl">{{name}}</h1>
+                        <div class="fl">
+                            <a href="#" class="workhouse-btn work-yellow">申请加入</a>
+                            <a href="#" class="workhouse-btn work-yellow">坊设置</a>
+                            <a href="#" class="workhouse-btn work-yellow">成员管理<img src="images/workshop/message.gif"/></a>
+                        </div>
+                        <div class="clear"></div>
+                    </div>
+                    <p>学科：{{subject}}&#12288;&#12288;学段：{{part}}
+                        <br/>
+                        {{desc}}
+                    </p>
+                </div>
+            </div>
+        </div>
+        <!--banner E-->
+
+        <!--wrap S-->
+        <div class="wrap-box">
+            <div class="main">
+                <!--main-left S-->
+                <div class="main-left fl">
+
+                    <!--最新公告 S-->
+                    <div class="left-con" ms-controller="announcement">
+                        <div class="workhouse-list">
+                            <div class="work-title">
+                                <h2 class="fl">最新公告</h2>
+                                <a href="#" class="fr">更多</a>
+                            </div>
+                            <h3>{{title}}</h3>
+                            <p>摘要：{{digest}}</p>
+                        </div>
+                    </div>
+                    <!--最新公告 E-->
+
+                    <!--最新简报 S-->
+                    <div class="left-con" ms-controller="brief">
+                        <div class="workhouse-list">
+                            <div class="work-title">
+                                <h2 class="fl">最新简报</h2>
+                                <a href="#" class="fr">更多</a>
+                            </div>
+                            <div class="work-birefing">
+                                <img src="images/workshop/jianbao_03.png" height="135" width="100" />
+                                <div class="work-birfing-right">
+                                    <h3>{{title}}</h3>
+                                    <div class="read-number">
+                                        <p>摘要：{{digest}}</p>
+                                        <span class="yellow">{{viewers}}</span>人已阅读
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="clearfix"></div>
+                        </div>
+                    </div>
+                    <!--最新简报 E-->
+
+                    <!--坊成员 S-->
+                    <div class="left-con" ms-controller="member">
+                        <div class="w90">
+                            <div class="left-title">坊成员</div>
+                            <div class="photopic-list">
+                                <ul>
+                                    <li ms-repeat="members">
+                                        <a href="">
+                                            <img src="images/newzone/pic_01.jpg" title="{{el.name}}" alt="{{el.name}}" />
+                                            <p>{{el.name}}</p>
+                                            <span></span>
+                                        </a>
+                                    </li>
+                                </ul>
+                                <div class="clearfix"></div>
+                                <div class="page-turn">
+                                    <a href="javascript:;" class="prev-btn" title="上一页"></a>
+                                    <a href="javascript:;" class="next-btn" title="下一页"></a>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <!--坊成员 E-->
+
+                    <!--最近访客 S-->
+                    <div class="left-con" ms-controller="viewer">
+                        <div class="w90">
+                            <div class="left-title">
+                                最近访客
+                            </div>
+                            <div class="photopic-list visiter">
+                                <ul>
+                                    <li ms-repeat="viewers">
+                                        <a href="">
+                                            <img src="images/newzone/pic_01.jpg" title="{{el.name}}" alt="{{el.name}}" />
+                                            <p>{{el.name}}</p>
+                                            <p class="recent-time">{{el.viewTime}}</p>
+                                            <span></span>
+                                        </a>
+                                    </li>
+                                </ul>
+                                <div class="clearfix"></div>
+                            </div>
+                        </div>
+                    </div>
+                    <!--最近访客 E-->
+
+                    <!--统计 S-->
+                    <div class="left-con" ms-controller="stat">
+                        <div class="workhouse-list">
+                            <div class="work-title">
+                                <h2>统计</h2>
+                            </div>
+                            <ul>
+                                <li>
+                                    <div class="count-name">
+                                        <img src="images/workshop/work-pic01.gif" />成员
+                                        <span class="yellow">{{member}}</span>
+                                    </div>
+                                    <div class="work-count">
+                                        <span style="width:80%;"></span>
+                                    </div>
+                                </li>
+                                <li>
+                                    <div class="count-name">
+                                        <img src="images/workshop/work-pic02.gif" />活动
+                                        <span class="yellow">{{act}}</span>
+                                    </div>
+                                    <div class="work-count">
+                                        <span style="width:70%;"></span>
+                                    </div>
+                                </li>
+                                <li>
+                                    <div class="count-name">
+                                        <img src="images/workshop/work-pic03.gif" />讨论
+                                        <span class="yellow">{{discuss}}</span>
+                                    </div>
+                                    <div class="work-count">
+                                        <span style="width:50%;"></span>
+                                    </div>
+                                </li>
+                                <li>
+                                    <div class="count-name">
+                                        <img src="images/workshop/work-pic04.gif" />资源
+                                        <span class="yellow">{{resource}}</span>
+                                    </div>
+                                    <div class="work-count">
+                                        <span style="width:40%;"></span>
+                                    </div>
+                                </li>
+                                <li>
+                                    <div class="count-name">
+                                        <img src="images/workshop/work-pic05.gif" />公告
+                                        <span class="yellow">{{announcement}}</span>
+                                    </div>
+                                    <div class="work-count">
+                                        <span style="width:30%;"></span>
+                                    </div>
+                                </li>
+                                <li>
+                                    <div class="count-name">
+                                        <img src="images/workshop/work-pic06.gif" />简报
+                                        <span class="yellow">{{brief}}</span>
+                                    </div>
+                                    <div class="work-count">
+                                        <span style="width:20%;"></span>
+                                    </div>
+                                </li>
+                            </ul>
+                        </div>
+                    </div>
+                    <!--统计 E-->
+                </div>
+                <!--main-left E-->
+
+                <!--main-right S-->
+                <div class="main-right fr">
+                    <!--right-con1 S-->
+                    <div class="right-con">
+                        <div class="work-subnav">
+                            <ul>
+                                <li class="greenBg">
+                                    <a href="#">
+                                        <img src="images/workshop/work-icon01.gif" title="" alt="" />
+                                        <p>首&#12288;页</p>
+                                    </a>
+                                </li>
+                                <li class="larkBg">
+                                    <a href="#">
+                                        <img src="images/workshop/work-icon02.gif" title="" alt="" />
+                                        <p>主题活动</p>
+                                    </a>
+                                </li>
+                                <li class="lightYellow">
+                                    <a href="#">
+                                        <img src="images/workshop/work-icon04.jpg" title="" alt="" />
+                                        <p>话题讨论</p>
+                                    </a>
+                                </li>
+                                <li class="publishBg">
+                                    <a href="#">
+                                        <img src="images/workshop/work-icon06.gif" title="" alt="" />
+                                        <p>公&#12288;告</p>
+                                    </a>
+                                </li>
+                                <li class="orangeBg">
+                                    <a href="#">
+                                        <img src="images/workshop/work-icon07.png" title="" alt="" />
+                                        <p>简&#12288;报</p>
+                                    </a>
+                                </li>
+                            </ul>
+                        </div>
+                    </div>
+                    <!--right-con E-->
+
+                    <!--研修活动 S-->
+                    <div class="right-con" ms-controller="train">
+                        <div class="work-box">
+                            <div class="work-title">
+                                <div class="fl">
+                                    <span class="workhouse-btn work-orange">研修活动</span>
+                                </div>
+                                <div class="fr">
+                                    <a href="#">更多</a>
+                                </div>
+                                <div class="clear"></div>
+                            </div>
+                            <!--列表表格 S-->
+                            <table width="100%" border="0" cellspacing="0" cellpadding="0">
+                                <tr>
+                                    <th width="32%">标题</th>
+                                    <th width="11%">发起人</th>
+                                    <th width="10%">参与人数</th>
+                                    <th width="12%">活动类型</th>
+                                    <th width="11%">状态</th>
+                                    <th width="24%">起止时间</th>
+                                </tr>
+                                <tr ms-repeat="trains">
+                                    <td width="32%">
+                                        <a href="#" class="circlebg" title="{{el.title}}">{{el.title}}</a>
+                                    </td>
+                                    <td width="11%">
+                                        <a href="#" class="yellow">{{el.author}}</a>
+                                    </td>
+                                    <td width="10%">
+                                        <a href="#">{{el.number}}</a>
+                                    </td>
+                                    <td width="12%">
+                                        <a href="#">{{el.type}}</a>
+                                    </td>
+                                    <td width="11%">
+                                        <a href="#" class="yellow">{{el.status}}</a>
+                                    </td>
+                                    <td width="24%">
+                                        <a href="#">{{el.startTime}}至{{el.endTime}}</a>
+                                    </td>
+                                </tr>
+                            </table>
+                            <!--列表表格 E-->
+                        </div>
+                    </div>
+                    <!--研修活动 E-->
+
+                    <!--讨论话题 S-->
+                    <div class="right-con" ms-controller="topic">
+                        <div class="work-box">
+                            <!--标题 S-->
+                            <div class="work-title borBottom">
+                                <div class="fl">
+                                    <span class="workhouse-btn work-orange">讨论话题</span>
+                                </div>
+                                <div class="fr">
+                                    <a href="#">更多</a>
+                                </div>
+                                <div class="clear"></div>
+                            </div>
+                            <!--标题 E-->
+                            <ul class="talk-over" ms-repeat="topics">
+                                <li>
+                                    <a href="#">
+                                        <h3 title="{{el.title}}">{{el.title}}</h3>
+                                        <p>
+                                            <span><b>发帖人：</b>{{el.author}}</span>
+                                            <span><b>浏览人数：</b>{{el.view}}</span>
+                                            <span><b>回帖人数：</b>{{el.replay}}</span>
+                                        </p>
+                                    </a>
+                                </li>
+                            </ul>
+                        </div>
+                    </div>
+                    <!--讨论话题 E-->
+
+                    <!--坊内资源 S-->
+                    <div class="right-con" ms-controller="resourse">
+                        <div class="work-box">
+                            <!--标题 S-->
+                            <div class="work-title borBottom">
+                                <div class="fl">
+                                    <span class="workhouse-btn work-orange">坊内资源</span>
+                                </div>
+                                <div class="fr">
+                                    <a href="#">更多</a>
+                                </div>
+                                <div class="clear"></div>
+                            </div>
+                            <!--标题 E-->
+                            <ul class="talk-over">
+                                <li ms-repeat="resourses">
+                                    <a href="#">
+                                        <h3 title="话题项目表.xls">{{el.title}}</h3>
+                                        <p>
+                                            <span><b>上传者：</b>{{el.author}}</span>
+                                            <span><b>上传时间：</b>2015-05-29</span>
+                                            <span class="evalute"><b>评价：</b></span>
+                                            <span><b>浏览数：</b>{{el.view}}</span>
+                                            <span><b>下载数：</b>2</span>
+                                        </p>
+                                    </a>
+                                </li>
+                            </ul>
+                        </div>
+                    </div>
+                    <!--坊内资源 E-->
+                </div>
+                <!--main-right E-->
+
+                <div class="clearfix"></div>
+            </div>
+            <!--main E-->
+        </div>
+        <!--wrapper E-->
+    </div>
+    <script src="js/lib/require.js" data-main="js/main.js"></script>
+</body>
+</html>

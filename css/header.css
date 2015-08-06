@@ -1,0 +1,277 @@
+.w80{
+    width: 80%;
+    min-width: 940px;
+    max-width: 1150px;
+    overflow: hidden;
+    margin: 0 auto;
+}
+.immon{
+	display:inline;
+	float:left;
+}
+img{
+    vertical-align: top;
+}
+.wrapper{
+    position: fixed;
+    left: 0;
+    top: 0;
+    _position:absolute;
+    z-index: 10000;
+    width: 100%;
+    height: 45px;
+    margin: 0 auto;
+    background: #fff;
+    border-bottom: 2px solid #ff5722;
+    vertical-align: middle;
+}
+.wrapper .logo{
+    margin: 0px;
+    padding: 12px 0 0 0;
+}
+.wrapper .logo a{
+    display: block;
+    font: bold 14px/20px "Microsoft Yahei";
+    color: #4a4a4a;
+    text-align: center;
+}
+.wrapper .wrap-nav li{
+    display: inline;
+    float: left;
+    margin: 0 0 0 15px;
+    font: 14px/45px "Microsoft Yahei";
+    color: #4a4a4a;
+}
+.wrapper .wrap-nav li .immon{
+    padding: 0 5px 0 0;
+    font-size: 23px;
+    color: #858079;
+}
+.wrapper .user-set{
+    position: relative;
+    height: 30px;
+    margin: 7px 0 0 0;
+    padding: 0 36px 0 0;
+    background: #858079;
+    border-radius: 20px;
+}
+.wrapper .user-set li{
+    display: inline;
+    float: left;
+    margin: 0 10px 0 15px;
+    font: 12px/30px "Microsoft Yahei";
+}
+.wrapper .user-set li .immon{
+    color: #fff;
+    padding: 0 5px 0 0;
+}
+.wrapper .user-set li a{
+    color: #fff;
+}
+.wrapper .user-set .user-photo{
+    position: absolute;
+    right: -3px;
+    top: -3px;
+}
+.wrapper .user-set .user-photo img{
+    width: 36px;
+    height: 36px;
+    overflow: hidden;
+}
+.wrapper .user-set .zhezhao{
+    z-index: 2;
+    position: absolute;
+	cursor:pointer;
+    right: -3px;
+    top: -3px;
+    width: 36px;
+    height: 36px;
+    background: url(../../images/newzone/js-header-bg.png) no-repeat right center;
+}
+.wrapper .user-set .zhezhao.noleftborder{
+    background: url(../../images/newzone/js-header-bg-noleftborder.png) no-repeat right center;
+}
+/* 退出按钮 */
+.quit-icon{
+    margin: 0 10px;
+    font: 14px/45px Arial,"Microsoft Yahei";
+}
+.quit-icon a,.quit-icon a:hover{
+    text-decoration: underline;
+}
+
+/* 头部 */
+.header{
+        position: relative;
+        width: 100%;
+        height: 98px;
+        background: #fff;
+        border-radius: 5px;
+        box-shadow: 0 2px 0 #d7cec6;
+    }
+.header .slidebar{
+    position: absolute;
+    top: 0;
+    right: 20px;
+    font: 14px/32px 'Microsoft Yahei';
+    border: 1px solid #efeeed;
+    border-top: none;
+    border-bottom-right-radius: 5px;
+    border-bottom-left-radius:5px;
+    color: #bcb6b1;
+}
+.header .sliderbar a{
+    padding: 0 10px;
+    color: #bcb6b1;
+}
+.header .logo{
+    width: 100%;
+    height: 36px;
+    padding: 14px 0 0 0;
+    font: 18px/36px "Microsoft Yahei";
+    text-align: center;
+}
+.header .logo a{
+    display: inline-block;
+    padding: 0 0 0 102px;
+    line-height: 36px;
+}
+.header .logo a img{
+    width: 36px;
+    padding-right: 20px;
+}
+.header .nav{
+    width: 100%;
+    margin: 15px auto 0;
+    text-align: center;
+    overflow: hidden;
+}
+.header .nav a{
+    display: inline-block;
+    margin: 0 2px 0 0;
+    padding: 0 22px 10px 20px;
+    font: 16px/24px 'Microsoft Yahei';
+    text-align: center;
+}
+.header .nav a:hover,.header .nav a.cur{
+    color: #ff5722;
+    border-bottom: 2px solid #ff5722;
+}
+.header .nav a:hover .immon,.header .nav a.cur .immon{
+    color: #ff5722;
+}
+.ellipsis_text{
+	display:block;
+	white-space:nowrap;
+	overflow:hidden;
+	text-overflow:ellipsis;
+}
+
+.text_overflow{
+	overflow : hidden;
+    text-overflow: ellipsis;
+    display: -webkit-box;
+    -webkit-line-clamp: 2;
+    -webkit-box-orient: vertical;
+}
+
+/*2015-6-26 textarea css*/
+.pre_textarea{
+    resize:none;
+    border:none;
+    font-family:'Microsoft Yahei';
+    max-height:300px;
+    margin: 0;
+    overflow: auto;
+    word-wrap: break-word;
+}
+pre {
+	white-space: pre-wrap; /* css-3 */     
+    white-space: -moz-pre-wrap;  /* Mozilla, since 1999 */
+    white-space: -pre-wrap;      /* Opera 4-6 */
+    white-space: -o-pre-wrap;    /* Opera 7 */
+    word-wrap: break-word;       /* Internet Explorer 5.5+ */
+}
+/* 头部退出 */
+.setBox{
+    position: relative;
+    width: 65px;
+    overflow: visible;
+}
+.setBox .name-a{
+    cursor: pointer;
+    width:65px;
+    text-overflow: ellipsis;
+    white-space: nowrap;
+    overflow: hidden;
+    display:block;
+    float:left;
+    color: #000;
+}
+.setBox .name-a .down01{
+    display: block;
+    position: absolute;
+    right: 0;
+    top: 50%;
+    margin-top: -2px;
+    width: 7px;
+    height: 4px;
+    background: url(../../images/down-01.gif) no-repeat;
+    margin-left: 5px;
+    vertical-align: 2px;
+    -webkit-transition:-webkit-transform .2s ease-in;
+    -moz-transition:-moz-transform .2s ease-in;
+    -webkit-backface-visibility: hidden;
+    transition:transform .2s ease-in;
+    _overflow:hidden;
+    *vertical-align: 5px
+}
+.set-icon{
+    position: absolute;
+    top: 40px;
+    right: -5px;
+    z-index: 80;
+    display: none;
+    width: 63px;
+    padding: 0 15px;
+    line-height: 20px;
+    border: 1px solid #ccc;
+    background: #fff;
+    font-size: 12px;
+}
+.hide-menu{
+    position: absolute;
+    top: -10px;
+    left: 50%;
+    margin-left: -5px;
+    width: 0;
+    height: 0;
+    font-size: 0;
+    line-height: 0;
+    background: #fff;
+}
+.hide-menu em,.hide-menu i{
+    width: 0;
+    height: 0;
+    display: block;
+    font-size: 0;
+    line-height: 0;
+    position: absolute;
+    border: 5px solid transparent;
+    border-style: dashed dashed solid dashed;
+}
+.set-icon em{
+    border-bottom-color:#d8d8d8;
+    top: -1px;
+}
+.set-icon i{
+    border-bottom-color: #fff;
+    top: 0;
+}
+.set-icon a,.set-icon a:hover{
+    display: block;
+    text-decoration: none;
+}
+.over-style{
+    overflow: visible;
+}

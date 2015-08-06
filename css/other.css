@@ -1,0 +1,241 @@
+.mt-10 {
+  margin-top: -10px;
+}
+.mt-20 {
+  margin-top: -20px;
+}
+.mt30 {
+  margin-top: 30px;
+}
+.pd15 {
+  padding: 15px;
+}
+.pd25 {
+  padding: 15px 25px;
+}
+.work-edit {
+  padding: 3px;
+  background: #888888;
+  color: #fff;
+}
+.work-del {
+  padding: 3px;
+  background: #FF642C;
+  color: #fff;
+}
+.hr-dotted {
+  border: none;
+  border-bottom: 1px dotted #ddd;
+}
+.add_new {
+  height: 24px;
+  background: #ff6332;
+  padding: 0px 10px;
+  border: none;
+  border-radius: 3px;
+  color: #fff;
+  cursor: pointer;
+  font: 12px/24px 'Microsoft YaHei', Arial;
+}
+.loca_address {
+  height: 30px;
+  font: 12px/30px 'Microsoft YaHei', Arial;
+}
+.loca_address p {
+  float: left;
+  color: #666;
+}
+.work-list {
+  width: 100%;
+  table-layout: fixed;
+  color: #000;
+}
+.work-list th {
+  height: 33px;
+  background: #f8f8f8;
+  color: #000;
+  text-align: center;
+}
+.work-list td {
+  height: 40px;
+  line-height: 40px;
+  border-bottom: 1px dotted #ddd;
+  overflow: hidden;
+  white-space: nowrap;
+  text-align: center;
+}
+.work-list td img {
+  margin: 17px 0px 0px 2px;
+}
+.work-list td.pr {
+  padding-right: 15px;
+  text-align: left;
+}
+.work-list td.orangr {
+  color: #ff6332;
+}
+.work-manage {
+  height: 30px;
+  overflow: hidden;
+  border-bottom: 1px solid #ff6100;
+}
+.work-manage ul {
+  list-style: none;
+  height: 30px;
+  margin-top: 1px;
+}
+.work-manage ul li {
+  float: left;
+  margin-right: 5px;
+  padding: 0px 20px;
+  height: 30px;
+  line-height: 30px;
+  cursor: pointer;
+  background: #efeeec;
+  color: #333;
+  border-radius: 3px;
+}
+.work-manage ul li.on {
+  color: #fff;
+  background: #ff6100;
+}
+.p-title {
+  height: 35px;
+  font: 14px/35px 'Microsoft YaHei', Arial;
+  font-weight: bold;
+  color: #000;
+  background: #f8f8f8;
+  text-align: center;
+}
+.work-ul-user {
+  list-style: none;
+  display: table;
+  margin: 10px auto;
+  height: 30px;
+}
+.work-ul-user li {
+  float: left;
+  line-height: 30px;
+  margin-right: 20px;
+}
+.work-ul-user li span {
+  color: #000;
+  margin-left: 3px;
+}
+.work-p-txt {
+  margin-top: 25px;
+  text-indent: 2em;
+  font: 14px/24px 'Microsoft YaHei', Arial;
+  color: #333;
+}
+.work-p-title1 {
+  font: 16px/40px 'Microsoft YaHei', Arial;
+  color: #333;
+}
+.imitate-select {
+  position: absolute;
+  z-index: 99;
+  width: 130px;
+}
+.imitate-select ul {
+  list-style: none;
+  border: 1px solid #ddd;
+  border-top: none;
+}
+.imitate-select ul li {
+  background: url(../../images/workshop/huodong_6.png);
+  line-height: 24px;
+  height: 24px;
+}
+.imitate-select ul li a {
+  color: #333;
+  margin-left: 45px;
+  font: 12px/24px 'Microsoft YaHei', Arial;
+}
+.imitate-select ul li:hover {
+  background: url(../../images/workshop/huodong_06.png);
+}
+.imitate-select ul li.on {
+  background: url(../../images/workshop/huodong_03.png);
+}
+.imitate-select ul li.on a {
+  color: #fff;
+}
+.workBtn {
+  margin: 0px 2px;
+}
+.workBtn a {
+  padding: 3px;
+  color: #fff;
+  border-radius: 3px;
+  font: 12px 'Microsoft YaHei', Arial;
+}
+.workBtn a.orange {
+  background: #ff642c;
+}
+.workBtn a.gray {
+  background: #878787;
+}
+.work-title2 {
+  font: 18px/30px 'Microsoft YaHei', Arial;
+  color: #ff6332;
+  font-weight: bold;
+  margin: 0px 15px;
+}
+.work-description {
+  margin: 8px 15px 0px 15px;
+  background: #f8f8f8;
+  padding: 10px 20px;
+}
+.work-description p {
+  color: #333;
+}
+.work-description p span.o {
+  color: #ff6332;
+}
+.work-active {
+  list-style: none;
+  width: 100%;
+}
+.work-active li {
+  border-left: 2px solid #fff;
+  font: 14px/40px 'Microsoft YaHei', Arial;
+  text-indent: 2em;
+  background: #fff;
+}
+.work-active li a {
+  color: #333;
+}
+.work-active li.on {
+  border-left: 2px solid #ff5720;
+  background: #f8f8f8;
+}
+.work-active li.on a {
+  color: #ff5720;
+}
+.attachments {
+  height: 400px;
+}
+.work-birefing img {
+  float: left;
+  width: 100px;
+  height: 135px;
+}
+.work-birefing .work-birfing-right {
+  float: left;
+  height: 135px;
+  overflow: hidden;
+  width: 90px;
+  margin-left: 5px;
+}
+.member-list table {
+  width: 100%;
+  table-layout: fixed;
+}
+.member-list table td.l {
+  text-align: left;
+}
+.member-list table td.lg {
+  text-align: left;
+  line-height: 24px;
+}
